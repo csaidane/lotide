@@ -7,11 +7,11 @@ describe("#head", () => {
     assert.strictEqual(head([1, 2, 3]), 1);
   });
   it("returns '5' for ['5']", () => {
-    assert.strictEqual(head(['5']), '5'); 
+    assert.strictEqual(head(['5']), '5');
   });
-  it("should return 'hello' for ['Hello', 'Lighthouse', 'Labs']", function(){
-    assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello")
-  })
+  it("should return 'hello' for ['Hello', 'Lighthouse', 'Labs']", function() {
+    assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+  });
 
 
 });

@@ -1,24 +1,7 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require("./assertEqual");
 
+const eqArrays = require("./eqArrays");
 
-const eqArrays = function(a1, a2) {
-  if (a1.length !== a2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < a1.length; i++) {
-      if (a1[i] !== a2[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
 
 //this function must exist because arrays have a typof Object
 // this covers the case where (typeof arr1 === typeof obj1) would evaluate to true when we want it to evaluate to false
@@ -61,6 +44,9 @@ const eqObjects = function(object1, object2) {
   }
   return true;
 };
+
+
+module.exports = eqObjects;
 
 
 const ab = { a: "1", b: "2" };
