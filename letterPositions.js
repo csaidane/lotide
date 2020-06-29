@@ -1,12 +1,6 @@
-const eqArrays = require("./eqArrays");
-
-const assertArraysEqual = require('./assertArraysEqual');
-
 const isLetter = function(str) {
   return str.length === 1 && str.match(/[a-z]/i);
 };
-
-
 
 const letterPositions = function(sentence) {
   const output = {};
@@ -29,9 +23,3 @@ const letterPositions = function(sentence) {
 
 
 module.exports = letterPositions;
-
-assertArraysEqual(letterPositions("hello").h, [0]);
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello").l, [2,3]);
-assertArraysEqual(letterPositions("hello").o, [4]);
-
